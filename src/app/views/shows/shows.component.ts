@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Shows} from '../../models/show';
+import {Episode} from '../../models/episode';
 
 @Component({
   selector: 'app-shows',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shows.component.sass']
 })
 export class ShowsComponent implements OnInit {
+
 
   constructor() { }
 
