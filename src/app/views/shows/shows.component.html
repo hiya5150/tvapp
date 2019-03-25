@@ -1,18 +1,18 @@
 <app-show-search></app-show-search>
+
 <h2>TV Shows</h2>
 <!-- this loops through the shows. When you click on hte name, the showInfo function is activated-->
 <ul>
   <li *ngFor="let show of shows" (click)="showInfo(show)">
+    <!--this displays a list of shows, with info on each show-->
     {{show.showName}} {{show.showDate}} {{show.showStatus}}
-    <!--<h2><span>{{selectedShow.showName}}</span></h2>-->
-    <!--<span>{{selectedShow.showDate}}</span>-->
+
   </li>
 
 
 </ul>
 
-<div *ngIf="selectedShow">
-  <h2>{{selectedShow.showName | uppercase}}</h2>
-  <h2>{{selectedShow.showSummary}}</h2>
-</div>
+<app-show [show]="selectedShow"></app-show>
+
+
 
