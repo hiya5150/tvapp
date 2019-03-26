@@ -11,12 +11,17 @@ import {SHOWS} from '../../models/mock-shows';
 })
 export class ShowsComponent implements OnInit {
 
-  shows = SHOWS;
+  shows: Show[];
   selectedShow: Show;
 
-  constructor() { }
+  constructor(private showsService: ShowsService) { }
+
+  getShows(): void {
+    this.showsService.getShows().subscribe(shows => this.shows = shows);
+  }
 
   ngOnInit() {
+    this.getShows();
   }
 
   showInfo(show: Show): void {
