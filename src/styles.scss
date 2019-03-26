@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$tvapp-primary: mat-palette($mat-indigo);
+$tvapp-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+$tvapp-warn:    mat-palette($mat-red);
+
+$tvapp-theme: mat-light-theme($tvapp-primary, $tvapp-accent, $tvapp-warn);
+
+@include angular-material-theme($tvapp-theme);
+
+table, th , td {
+
+
+  padding: 5px 25px;
+
+
+}
