@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+// import {ShowsService} from '../../models/services/shows.service';
+import {Show} from '../../models/show';
+import {ShowsService} from '../../models/services/shows.service';
 
 @Component({
   selector: 'app-show',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show.component.sass']
 })
 export class ShowComponent implements OnInit {
+  @Input() show: Show;
 
   constructor() { }
 

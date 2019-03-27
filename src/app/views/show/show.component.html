@@ -1,3 +1,6 @@
-<p>
-  show works!
-</p>
+
+<div *ngIf="show">
+  <h2>{{show.showName | uppercase}}</h2>
+  <h2>{{show.showSummary}}</h2>
+</div>
+

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ShowsService} from '../../models/services/shows.service';
+import {SHOWS} from '../../models/mock-shows';
+import {Show} from '../../models/show';
 
 @Component({
   selector: 'app-show-search',
@@ -6,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-search.component.sass']
 })
 export class ShowSearchComponent implements OnInit {
+  shows = SHOWS;
 
-  constructor() { }
 
+  constructor(private showsService: ShowsService) { }
+
+
+  searchTvShow() {
+
+  }
   ngOnInit() {
   }
 
