@@ -6,7 +6,8 @@ export class Show {
   showDate: string;
   showStatus: string;
   showSummary: string;
-  // episodeDetails: Seasons;
+  // showImg: string;
+  episodeDetails: Seasons;
 
   // showImage:
 
@@ -16,7 +17,8 @@ export class Show {
       this.showSummary = args.showSummary;
       this.showDate = args.showDate;
       this.showSummary = args.showSummary;
-      // this.episodeDetails = args.episodeDetails;
+      // this.showImg = args.showImg;
+      this.episodeDetails = args.episodeDetails;
 
     }
   }

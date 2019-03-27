@@ -2,5 +2,12 @@
 <div *ngIf="show">
   <h2>{{show.showName | uppercase}}</h2>
   <h2>{{show.showSummary}}</h2>
+  <!--<img [src]="'app/models/show/Menachem.jpg'" alt="pictureOfShow">-->
+  <p>
+    Last Episode: {{show.episodeDetails.lastEpisode}}
+    Next Episode: {{show.episodeDetails.nextEpisode}}
+  </p>
+  <a routerLink="/seasons">More Information</a>
+
 </div>
 

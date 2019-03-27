@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ShowsService} from '../../models/services/shows.service';
 import {SHOWS} from '../../models/mock-shows';
 import {Show} from '../../models/show';
+import {Observable, of} from 'rxjs';
 
 @Component({
   selector: 'app-show-search',
@@ -15,9 +16,14 @@ export class ShowSearchComponent implements OnInit {
   constructor(private showsService: ShowsService) { }
 
 
-  searchTvShow() {
+  searchTvShow(term: string): Observable<Show[]> {
+          if (!term) {
+      // if not search term, return empty show array.
+      return of([]);
 
+    }
   }
+
   ngOnInit() {
   }
 
