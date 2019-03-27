@@ -4,23 +4,19 @@ import {Observable, of} from 'rxjs';
 import {Show} from '../show';
 import {Seasons} from '../seasons';
 import {SHOWS} from '../../models/mock-shows';
-import {HttpClient} from '@angular/common/http';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class ShowsService {
+export class MockShowsService {
 
-  private showsUrl = 'http://api.tvmaze.com/shows/1?embed=episodes';
-
-  constructor(private http: HttpClient) {
-  }
+  constructor() { }
 
 
-  getShows(): Observable<any[]> {
-    return this.http.get<any[]>(this.showsUrl);
+  getShows(): Observable<Show[]> {
+    return of(SHOWS);
+
   }
 }
-
