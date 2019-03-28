@@ -13,10 +13,10 @@ export class Show {
 
   constructor(args?) {
     if (args) {
-      this.showName = args.showName;
-      this.showSummary = args.showSummary;
-      this.showDate = args.showDate;
-      this.showSummary = args.showSummary;
+      this.showName = args.name;
+      this.showSummary = args.summary;
+      this.showDate = args.premiere;
+      this.showStatus = args.status;
       // this.showImg = args.showImg;
       this.episodeDetails = args.episodeDetails;
 
