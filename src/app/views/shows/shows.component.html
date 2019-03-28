@@ -2,11 +2,11 @@
 
 <h2>TV Shows</h2>
 <table >
-  <tr *ngFor="let show of shows" (click)="showInfo(show)">
+  <tr *ngFor="let show of shows">
     <td>{{show.showName}}</td>
     <td>{{show.showDate}}</td>
     <td>{{show.showStatus}}</td>
-
+  <!--(click)="showInfo(show)-->
   </tr>
 
 
@@ -58,7 +58,7 @@
 <!--</ul>-->
 
 <app-show [show]="selectedShow"></app-show>
-<router-outlet></router-outlet>
+
 
 
 

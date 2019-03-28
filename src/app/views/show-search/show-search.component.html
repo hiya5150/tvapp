@@ -1,10 +1,10 @@
-<body>
+<p>{{query}}</p>
 <form>
-  <input matInput name="showname" type="text">
-  <button class ="addBtn" mat-flat-button color="accent"
-          (click)="searchTvShow()">Search TV Show</button>
+  <input [(ngModel)]="query" matInput type="text" name="flue">
+  <button mat-flat-button color="accent"
+          routerLink="/shows/{{query}}">Search TV Show</button>
 
   </form>
-  <a routerLink="/shows">List of Shows</a>
-  </body>
+  <!--<a routerLink="/shows/">List of Shows</a>-->
+
 

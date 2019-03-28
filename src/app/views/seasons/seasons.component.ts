@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Show} from '../../models/show';
+import {ShowsService} from '../../models/services/shows.service';
+
 
 @Component({
   selector: 'app-seasons',

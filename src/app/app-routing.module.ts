@@ -7,9 +7,9 @@ import {SeasonsComponent} from './views/seasons/seasons.component';
 
 
 const routes: Routes = [
-  {path: 'showSearch', component: ShowSearchComponent},
-  {path: 'shows', component: ShowsComponent},
-  {path: 'show', component: ShowComponent},
+  {path: 'showSearch/', component: ShowSearchComponent},
+  {path: 'shows/:query', component: ShowsComponent},
+  {path: 'show/:id', component: ShowComponent},
   {path: 'seasons', component: SeasonsComponent}
 ];
 

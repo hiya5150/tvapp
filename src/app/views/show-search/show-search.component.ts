@@ -10,19 +10,10 @@ import {Observable, of} from 'rxjs';
   styleUrls: ['./show-search.component.sass']
 })
 export class ShowSearchComponent implements OnInit {
-  shows = SHOWS;
+  query: string;
 
 
-  constructor(private showsService: ShowsService) { }
-
-
-  searchTvShow(term: string): Observable<Show[]> {
-          if (!term) {
-      // if not search term, return empty show array.
-      return of([]);
-
-    }
-  }
+  constructor() { }
 
   ngOnInit() {
   }

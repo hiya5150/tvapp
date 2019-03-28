@@ -5,7 +5,7 @@ import {MatButtonModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {ShowsComponent } from './views/shows/shows.component';
@@ -32,7 +32,7 @@ import { SeasonsComponent } from './views/seasons/seasons.component';
     MatButtonModule,
     MatInputModule,
     BrowserAnimationsModule,
-    // HttpClientModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
