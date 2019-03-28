@@ -13,14 +13,14 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ShowsService {
 
-  private showsUrl = 'http://api.tvmaze.com/shows/1?embed=episodes';
+  private showsUrl = 'http://api.tvmaze.com/search/shows?q=';
 
   constructor(private http: HttpClient) {
   }
 
 
-  getShows(): Observable<any[]> {
-    return this.http.get<any[]>(this.showsUrl);
+  getShows(query): Observable<any[]> {
+    return this.http.get<any[]>(this.showsUrl + query);
   }
 }
 
