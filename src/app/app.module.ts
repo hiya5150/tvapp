@@ -12,6 +12,7 @@ import {ShowsComponent } from './views/shows/shows.component';
 import { ShowSearchComponent } from './views/show-search/show-search.component';
 import { ShowComponent } from './views/show/show.component';
 import { SeasonsComponent } from './views/seasons/seasons.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
