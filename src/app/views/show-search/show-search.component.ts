@@ -15,15 +15,6 @@ export class ShowSearchComponent implements OnInit {
 
   constructor(private showsService: ShowsService) { }
 
-
-  // searchTvShow(term: string): Observable<Show[]> {
-  //         if (!term) {
-  //     // if not search term, return empty show array.
-  //     return of([]);
-  //
-  //   }
-  // }
-
   ngOnInit() {
   }
 

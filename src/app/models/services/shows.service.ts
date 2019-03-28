@@ -13,7 +13,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ShowsService {
 
-  private showsUrl = 'http://api.tvmaze.com/shows/1?embed=episodes';
+  private showsUrl = 'http://api.tvmaze.com/search/shows?q=girls';
 
   constructor(private http: HttpClient) {
   }

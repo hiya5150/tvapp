@@ -22,17 +22,17 @@ export class ShowsComponent implements OnInit {
 
 
     this.showsService.getShows().subscribe(results => {
-      // console.log(shows);
+
       results.map((item) => {
-        const temp = new Show(item);
-        console.log(item);
+        const temp = new Show(item.show);
         this.shows.push(temp);
+        console.log(this.shows);
       });
     });
 
-    // showInfo(show: Show): void {
-    //   this.selectedShow = show;
-    // }
+  //   showInfo(show: Show): void {
+  //     this.selectedShow = show
+  // };
   }
 
   ngOnInit(): void {

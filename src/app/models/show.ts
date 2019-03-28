@@ -15,7 +15,7 @@ export class Show {
     if (args) {
       this.showName = args.name;
       this.showSummary = args.summary;
-      this.showDate = args.premiere;
+      this.showDate = args.premiered;
       this.showStatus = args.status;
       // this.showImg = args.showImg;
       this.episodeDetails = args.episodeDetails;
