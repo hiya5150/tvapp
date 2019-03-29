@@ -13,6 +13,7 @@ import { ShowComponent } from './views/show/show.component';
 import { SeasonsComponent } from './views/seasons/seasons.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EpisodesComponent } from './views/episodes/episodes.component';
+import {NgPipesModule} from 'angular-pipes';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { EpisodesComponent } from './views/episodes/episodes.component';
 
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { EpisodesComponent } from './views/episodes/episodes.component';
     MatButtonModule,
     MatInputModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgPipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

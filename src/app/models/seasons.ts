@@ -8,7 +8,7 @@ export class Seasons {
 
   constructor(args?) {
     if (args) {
-      this.seasonId = args.number;
+      this.seasonId = args.id;
       this.seasonNumber = args.number;
       this.episodes = args.episodes;
 

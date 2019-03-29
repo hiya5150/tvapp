@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ShowsService} from '../../models/services/shows.service';
 import {Show} from '../../models/show';
-import {SHOWS} from '../../models/mock-shows';
 import {ActivatedRoute} from '@angular/router';
 // import {mockShowService} from '../../models/services/shows.service';
 

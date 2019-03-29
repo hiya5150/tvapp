@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Show} from '../../models/show';
 import {ShowsService} from '../../models/services/shows.service';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -10,9 +11,17 @@ import {ShowsService} from '../../models/services/shows.service';
 })
 export class SeasonsComponent implements OnInit {
   @Input() show: Show;
-  constructor() { }
+
+  id: number;
+  constructor(private showsService: ShowsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
+  // getSeasons(): void {
+  //   this.showsService.getSeasons(this.id).subscribe(results => {this.show.seasons = results});
+  // }
+
 }
+
+

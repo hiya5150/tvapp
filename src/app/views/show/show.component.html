@@ -1,10 +1,11 @@
 
 <div *ngIf="show">
+  <img *ngIf="show.showImg" [src]="show.showImg.medium">
   <h2>{{show.showName | uppercase}}</h2>
   <h2> Premiered:{{show.showDate}}</h2>
   <h2>Show Status: {{show.showStatus}}</h2>
-  {{show.showSummary}}.innerHTML
-  <img *ngIf="show.showImg" alt="{{show.showName}} cover" [src]="show.showImg.medium">
+  {{show.showSummary | stripTags}}
+
 
     <!--Last Episode: {{show.episodeDetails.lastEpisode}}-->
     <!--Next Episode: {{show.episodeDetails.nextEpisode}}-->

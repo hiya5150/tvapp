@@ -2,6 +2,7 @@ import {Seasons} from './seasons';
 
 export class Show {
 
+  showId: number;
   showName: string;
   showDate: string;
   showStatus: string;
@@ -19,6 +20,7 @@ export class Show {
       this.showImg = args.image;
       this.showStatus = args.status;
       this.seasons = args.seasons;
+      this.showId = args.id;
 
 
     }
