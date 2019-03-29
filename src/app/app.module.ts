@@ -5,7 +5,6 @@ import {MatButtonModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {ShowsComponent } from './views/shows/shows.component';
@@ -13,6 +12,7 @@ import { ShowSearchComponent } from './views/show-search/show-search.component';
 import { ShowComponent } from './views/show/show.component';
 import { SeasonsComponent } from './views/seasons/seasons.component';
 import {HttpClientModule} from '@angular/common/http';
+import { EpisodesComponent } from './views/episodes/episodes.component';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     ShowSearchComponent,
     ShowComponent,
     SeasonsComponent,
+    EpisodesComponent,
 
 
 

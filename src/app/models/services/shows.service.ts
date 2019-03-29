@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Observable, of} from 'rxjs';
-// import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Show} from '../show';
-import {Seasons} from '../seasons';
-import {SHOWS} from '../../models/mock-shows';
+import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +8,8 @@ import {HttpClient} from '@angular/common/http';
 export class ShowsService {
 
   private showsUrl = 'http://api.tvmaze.com/search/shows?q=';
+  private showUrl = 'http://api.tvmaze.com/shows/';
+  private seasonUrl = 'http://api.tvmaze.com/shows/';
 
   constructor(private http: HttpClient) {
   }
@@ -21,6 +17,10 @@ export class ShowsService {
 
   getShows(query): Observable<any[]> {
     return this.http.get<any[]>(this.showsUrl + query);
+  }
+
+  getShow(id: number): Observable<any[]> {
+    return this.http.get<any[]>(this.showUrl + id + '?embed=nextepisode');
   }
 }
 
