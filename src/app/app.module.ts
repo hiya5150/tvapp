@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {MatButtonModule} from '@angular/material';
+import {MatButtonModule, MatToolbarModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -37,7 +37,8 @@ import {NgPipesModule} from 'angular-pipes';
     MatInputModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgPipesModule
+    NgPipesModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

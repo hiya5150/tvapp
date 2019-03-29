@@ -1,9 +1,21 @@
-<form>
-  <input [(ngModel)]="query" matInput type="text" name="flue">
-  <button mat-flat-button color="accent"
-          routerLink="/shows/{{query}}">Search TV Show</button>
+  <div class="wrapper">
+    <div class="container">
+      <mat-toolbar color="accent">
+        <h1>{{title}}</h1>
+        <!--<div class="float-right">-->
+        <form>
+            <mat-form-field color="accent" appearance="standard" aria-label="search" >
+          <input [(ngModel)]="query" matInput type="text" name="random" >
+            </mat-form-field>
+          <button mat-icon-button
+                  routerLink="/shows/{{query}}">Search for TV Show</button>
+        </form>
+        <!--</div>-->
+      </mat-toolbar>
 
-  </form>
+
+    </div>
+  </div>
   <!--<a routerLink="/shows/">List of Shows</a>-->
 
 
