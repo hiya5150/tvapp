@@ -5,6 +5,7 @@ import {MatButtonModule, MatToolbarModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgPipesModule} from 'angular-pipes';
 
 import { AppComponent } from './app.component';
 import {ShowsComponent } from './views/shows/shows.component';
@@ -13,7 +14,8 @@ import { ShowComponent } from './views/show/show.component';
 import { SeasonsComponent } from './views/seasons/seasons.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EpisodesComponent } from './views/episodes/episodes.component';
-import {NgPipesModule} from 'angular-pipes';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import {NgPipesModule} from 'angular-pipes';
     HttpClientModule,
     NgPipesModule,
     MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,61 +1,13 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let show of shows" (click)="showInfo(show)" >
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{show.showName}}</mat-panel-title>
+      <mat-panel-description>Premiered: {{show.showDate | date}}</mat-panel-description>
+      <mat-panel-description>Status: {{show.showStatus}}</mat-panel-description>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
 
-
-<h2>TV Shows</h2>
-<table >
-  <tr *ngFor="let show of shows" (click)="showInfo(show)">
-    <td>{{show.showName}}</td>
-    <td>Date Premiered :{{show.showDate}}</td>
-    <td>Status :{{show.showStatus}}</td>
-
-  </tr>
-
-
-</table>
-<!-- this loops through the shows. When you click on hte name, the showInfo function is activated-->
-<!--<table mat-table *ngFor="let show of shows" (click)="showInfo(show)">-->
-   <!--{{show.showDate}} {{show.showStatus}}-->
-  <!--<ng-container matColumnDef="showName">-->
-    <!--<th mat-header-cell *matHeaderCellDef> Show Name </th>-->
-    <!--<td mat-cell *matCellDef="let show"> {{show.showName}} </td>-->
-  <!--</ng-container>-->
-<!--</table>-->
-<!--<table mat-table *ngFor="let show of shows" (click)="showInfo(show)" class="mat-elevation-z8">-->
-
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
-  <!--<ng-container matColumnDef="showName">-->
-    <!--<th mat-header-cell *matHeaderCellDef> Show Name </th>-->
-    <!--<td mat-cell *matCellDef="let row"> {{show.showDate}} </td>-->
-  <!--</ng-container>-->
-
-  <!--&lt;!&ndash; Name Column &ndash;&gt;-->
-  <!--<ng-container matColumnDef="premiereDate">-->
-    <!--<th mat-header-cell *matHeaderCellDef> Premiere Date </th>-->
-    <!--<td mat-cell *matCellDef="let row"> {{show.showDate}} </td>-->
-  <!--</ng-container>-->
-
-  <!--&lt;!&ndash; Weight Column &ndash;&gt;-->
-  <!--<ng-container matColumnDef="status">-->
-    <!--<th mat-header-cell *matHeaderCellDef> Status </th>-->
-    <!--<td mat-cell *matCellDef="let row"> {{show.showStatus}} </td>-->
-  <!--</ng-container>-->
-
-
-  <!--<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
-  <!--<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>-->
-<!--</table>-->
-
-<!--<ul>-->
-  <!--<li *ngFor="let show of shows" (click)="showInfo(show)">-->
-    <!--&lt;!&ndash;this displays a list of shows, with info on each show&ndash;&gt;-->
-
-
-  <!--</li>-->
-
-
-<!--</ul>-->
 
 <app-show [show]="selectedShow"></app-show>
 

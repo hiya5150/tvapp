@@ -4,7 +4,7 @@ export class Seasons {
 
   seasonId: number;
   seasonNumber: number;
-  episodes: Episodes;
+  episodes: Episodes[];
 
   constructor(args?) {
     if (args) {

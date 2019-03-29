@@ -7,33 +7,31 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-shows',
   templateUrl: './shows.component.html',
-  styleUrls: ['./shows.component.sass']
+  styleUrls: ['./shows.component.css']
 })
 export class ShowsComponent implements OnInit {
 
   shows: Show[];
   selectedShow: Show;
 
-  constructor(private showsService: ShowsService, private route: ActivatedRoute) { }
-
-  getShows(): void {
-    this.showsService.getShows(this.route.snapshot.params.query).subscribe(results => {
-      this.shows = [];
-      results.map((item) => {
-        const temp = new Show(item.show);
-        this.shows.push(temp);
-
+  constructor(private showsService: ShowsService, private route: ActivatedRoute) {
+    this.route.paramMap.subscribe( pm => {
+      this.showsService.getShows( pm.get('query')).subscribe(results => {
+        this.shows = [];
+        results.map((item) => {
+          const temp = new Show(item.show);
+          this.shows.push(temp);
+        });
       });
-    });
+      }
+    );
   }
 
   ngOnInit() {
-    this.getShows();
   }
 
   showInfo(show: Show): void {
     this.selectedShow = show;
-
   }
 
 }

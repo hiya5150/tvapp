@@ -4,6 +4,7 @@ import {Show} from '../../models/show';
 // import {Seasons} from '../../models/seasons';
 // import { StripTagsPipe } from 'angular-pipes';
 
+
 @Component({
   selector: 'app-show',
   templateUrl: './show.component.html',

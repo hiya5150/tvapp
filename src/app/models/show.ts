@@ -8,7 +8,7 @@ export class Show {
   showStatus: string;
   showSummary: string;
   showImg: {medium: string};
-  seasons: Seasons;
+  seasons: Seasons[];
 
   // showImage:
 
@@ -24,5 +24,12 @@ export class Show {
 
 
     }
+  }
+
+  addSeason(season: Seasons) {
+    if (!this.seasons) {
+      this.seasons = [];
+          }
+    this.seasons.push(season);
   }
 }
