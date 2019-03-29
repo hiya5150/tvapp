@@ -2,11 +2,11 @@
 
 <h2>TV Shows</h2>
 <table >
-  <tr *ngFor="let show of shows">
+  <tr *ngFor="let show of shows" (click)="showInfo(show)">
     <td>{{show.showName}}</td>
     <td>{{show.showDate}}</td>
     <td>{{show.showStatus}}</td>
-  <!--(click)="showInfo(show)-->
+
   </tr>
 
 

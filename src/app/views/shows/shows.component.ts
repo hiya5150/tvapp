@@ -34,6 +34,7 @@ export class ShowsComponent implements OnInit {
 
   showInfo(show: Show): void {
     this.selectedShow = show;
+
   }
 
 }
