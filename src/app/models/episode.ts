@@ -1,22 +1,18 @@
 export class Episode {
 
+  episodeId: number;
   episodeName: string;
   episodeNumber: number;
-  episodeSummary: string;
-  episodeDate: string;
-  lastEpisode: string;
-  nextEpisode: string;
+  episodeAired: string;
+
   // episodeImage:
 
   constructor(args?) {
     if (args) {
-
-      this. episodeName = args.name;
+      this.episodeId = args.id;
       this.episodeNumber = args.number;
-      this.episodeSummary = args.summary;
-      this.episodeDate = args.episodeDate;
-      this.lastEpisode = args.previousepisode;
-      this.nextEpisode = args.nextEpisode;
+      this.episodeAired = args.airdate;
+
 
     }
   }

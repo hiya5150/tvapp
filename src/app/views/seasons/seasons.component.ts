@@ -8,7 +8,7 @@ import {Season} from '../../models/season';
 @Component({
   selector: 'app-seasons',
   templateUrl: './seasons.component.html',
-  styleUrls: ['./seasons.component.sass']
+  styleUrls: ['./seasons.component.css']
 })
 export class SeasonsComponent implements OnInit {
   // @Input() id: number;
@@ -19,11 +19,7 @@ seasons: Season[];
   constructor(
     private showService: ShowsService,
     private route: ActivatedRoute) {
-      console.log('aaaa' + this.id);
-
       this.id = this.route.snapshot.paramMap.get('id');
-
-
   }
   getSeason(): void {
     this.showService.getSeasons(this.id).subscribe(result => {
@@ -31,7 +27,6 @@ seasons: Season[];
 
       result.map((item) => {
         const temp = new Season(item);
-        console.log(temp);
         this.seasons.push(temp);
 
       });
