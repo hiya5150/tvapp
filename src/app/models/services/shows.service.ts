@@ -25,7 +25,7 @@ export class ShowsService {
   }
 
   // gets list of season based on show's id
-  getSeasons(id): Observable<any[]> {
+  getSeasons(id: any): Observable<any[]> {
     console.log(this.seasonUrl + id + '/seasons');
     return this.http.get<any[]>(this.seasonUrl + id + '/seasons');
   }

@@ -13,15 +13,17 @@ import {Season} from '../../models/season';
 export class ShowsComponent implements OnInit {
 
   shows: Show[];
-  id: number;
+  id: Show;
   seasons: Season;
 
   constructor(private showsService: ShowsService, private route: ActivatedRoute) {
+    console.log(this.id)
     this.route.paramMap.subscribe( pm => {
       this.showsService.getShows( pm.get('query')).subscribe(results => {
         this.shows = [];
         results.map((item) => {
           const temp = new Show(item.show);
+          console.log(temp);
           this.shows.push(temp);
         });
       });

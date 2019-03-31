@@ -8,7 +8,11 @@
     <ng-template matExpansionPanelContent>
       <mat-panel-description> <img [src]="show.showImg.medium"></mat-panel-description>
       <span [innerHTML]="show.showSummary"></span>
-      <a routerLink="/seasons">More Information</a>
+<!--      <app-seasons [id]="show.showId"></app-seasons>-->
+      <a routerLink="/seasons/{{show.showId}}">More Information</a>
+
     </ng-template>
   </mat-expansion-panel>
 </mat-accordion>
+
+

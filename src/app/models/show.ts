@@ -21,7 +21,7 @@ export class Show {
       this.showStatus = args.status;
       this.seasons = args.seasons;
       this.showId = args.id;
-
+      console.log(this.showId);
 
     }
   }
