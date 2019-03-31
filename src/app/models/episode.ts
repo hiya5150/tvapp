@@ -1,4 +1,4 @@
-export class Episodes {
+export class Episode {
 
   episodeName: string;
   episodeNumber: number;

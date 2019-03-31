@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ShowsService} from '../../models/services/shows.service';
 import {Show} from '../../models/show';
 import {ActivatedRoute} from '@angular/router';
-// import {mockShowService} from '../../models/services/shows.service';
+import {Season} from '../../models/season';
+
 
 @Component({
   selector: 'app-shows',
@@ -12,7 +13,8 @@ import {ActivatedRoute} from '@angular/router';
 export class ShowsComponent implements OnInit {
 
   shows: Show[];
-  selectedShow: Show;
+  id: number;
+  seasons: Season;
 
   constructor(private showsService: ShowsService, private route: ActivatedRoute) {
     this.route.paramMap.subscribe( pm => {
@@ -28,10 +30,6 @@ export class ShowsComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  showInfo(show: Show): void {
-    this.selectedShow = show;
   }
 
 }

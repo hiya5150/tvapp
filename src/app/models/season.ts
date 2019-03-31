@@ -1,10 +1,10 @@
-import {Episodes} from './episodes';
+import {Episode} from './episode';
 
-export class Seasons {
+export class Season {
 
   seasonId: number;
   seasonNumber: number;
-  episodes: Episodes[];
+  episodes: Episode[];
 
   constructor(args?) {
     if (args) {

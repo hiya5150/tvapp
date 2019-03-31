@@ -1,14 +1,5 @@
-<mat-accordion>
-  <mat-expansion-panel *ngFor="let show of shows">
-    <mat-expansion-panel-header>
-      <mat-panel-title> {{show.showName | uppercase}}</mat-panel-title>
-      <mat-panel-description> <img *ngIf="show.showImg" [src]="show.showImg.medium"></mat-panel-description>
-      <mat-panel-description><h2> Premiered:{{show.showDate}}</h2></mat-panel-description>
-      <mat-panel-description>{{show.showSummary | stripTags}} </mat-panel-description>
-    </mat-expansion-panel-header>
-  </mat-expansion-panel>
-</mat-accordion>
-  <a routerLink="/seasons">More Information</a>
+
+
 
 
 

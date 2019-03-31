@@ -19,9 +19,10 @@ export class ShowsService {
     return this.http.get<any[]>(this.showsUrl + query);
   }
 
-  // getShow(id: number): Observable<any[]> {
-  //   return this.http.get<any[]>(this.showUrl + id + '?embed=nextepisode');
-  // }
+  getShow(id: number): Observable<any[]> {
+    return this.http.get<any[]>(this.showUrl + id + '?embed=nextepisode');
+  }
+
   getSeasons(id: number): Observable<any[]> {
     return this.http.get<any[]>(this.showUrl + id + '/seasons');
   }

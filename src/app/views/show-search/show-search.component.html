@@ -1,15 +1,17 @@
   <div class="wrapper">
     <div class="container">
-      <mat-toolbar color="accent">
+      <mat-toolbar color="accent" class="inline">
         <h1>{{title}}</h1>
         <!--<div class="float-right">-->
-        <form class="example-form">
+        <div>
+        <form class="form1">
             <mat-form-field color="accent" appearance="standard" aria-label="search" >
           <input [(ngModel)]="query" matInput type="text" name="random" >
             </mat-form-field>
           <button mat-icon-button
                   routerLink="/shows/{{query}}">Search for TV Show</button>
         </form>
+        </div>
         <!--</div>-->
       </mat-toolbar>
 

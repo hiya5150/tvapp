@@ -1,15 +1,9 @@
-
-
-
-<table >
-  <tr >
-    <!--<td>{{}}</td>-->
-    <!--<td>{{}}</td>-->
-    <!--<td>{{}}</td>-->
-  </tr>
-</table>
-
-
-<!--<app-show [show]="selectedShow"></app-show>-->
+<mat-accordion *ngIf="show">
+<mat-expansion-panel *ngIf="show.seasons" >
+  <mat-expansion-panel-header *ngFor="let season of show.seasons">
+    <mat-panel-title>{{season.seasonNumber}} </mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+</mat-accordion>
 
 

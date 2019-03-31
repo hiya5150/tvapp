@@ -1,4 +1,4 @@
-import {Seasons} from './seasons';
+import {Season} from './season';
 
 export class Show {
 
@@ -8,7 +8,7 @@ export class Show {
   showStatus: string;
   showSummary: string;
   showImg: {medium: string};
-  seasons: Seasons[];
+  seasons: Season[];
 
   // showImage:
 
@@ -26,7 +26,7 @@ export class Show {
     }
   }
 
-  addSeason(season: Seasons) {
+  addSeason(season: Season) {
     if (!this.seasons) {
       this.seasons = [];
           }
