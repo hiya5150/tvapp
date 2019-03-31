@@ -11,7 +11,7 @@ export class ShowsService {
   }
 // http call
   private baseUrl = 'http://api.tvmaze.com/';
-Observable;
+
 
 // gets list of shows based on seach query
   getShows(query): Observable<any[]> {

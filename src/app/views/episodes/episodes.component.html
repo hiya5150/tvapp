@@ -4,7 +4,7 @@
 
   <th mat-header-cell *matHeaderCellDef> #</th>
 
-    <td mat-cell *matCellDef="let episodes">{{episodes.number}}</td>
+    <td mat-cell *matCellDef="let episodes">{{episodes.episodeNumber}}</td>
 
   </ng-container>
 
@@ -12,7 +12,7 @@
 
     <th mat-header-cell *matHeaderCellDef> Name </th>
 
-    <td mat-cell *matCellDef="let episodes"> {{episodes.name}}</td>
+    <td mat-cell *matCellDef="let episodes"> {{episodes.episodeName}}</td>
 
   </ng-container>
 
@@ -20,7 +20,7 @@
 
     <th mat-header-cell *matHeaderCellDef> Aired </th>
 
-    <td mat-cell *matCellDef="let episodes"> {{episodes.aired}}</td>
+    <td mat-cell *matCellDef="let episodes"> {{episodes.episodeAired}}</td>
 
   </ng-container>
 

@@ -1,4 +1,5 @@
 import {Season} from './season';
+import {Episode} from './episode';
 
 export class Show {
 
@@ -7,8 +8,13 @@ export class Show {
   showDate: string;
   showStatus: string;
   showSummary: string;
-  showImg: {medium: string};
+  showImg: { medium: string };
   seasons: Season[];
+  nextEpisodeUrl: string;
+  previousEpisodeUrl: string;
+  nextEpisode: Episode;
+  previousEpisode: Episode;
+
 
   // showImage:
 
@@ -22,14 +28,23 @@ export class Show {
       this.seasons = args.seasons;
       this.showId = args.id;
       console.log(this.showId);
+      this.previousEpisodeUrl = (args.links.previousepisode) ? args.links.previousepisode.href : null;
+      this.nextEpisodeUrl = (args.links.nextepisode) ? args.links.nextepisode.hreff : null;
+
 
     }
   }
 
-  addSeason(season: Season) {
-    if (!this.seasons) {
-      this.seasons = [];
-          }
-    this.seasons.push(season);
+  addPreviousEpisode(episode: Episode) {
+
   }
 }
+
+//   addSeason(season: Season) {
+//     if (!this.seasons) {
+//       this.seasons = [];
+//           }
+//     this.seasons.push(season);
+//   }
+// }
+
