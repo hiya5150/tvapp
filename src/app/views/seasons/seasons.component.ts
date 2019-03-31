@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {Show} from '../../models/show';
 import {ShowsService} from '../../models/services/shows.service';
 import {ActivatedRoute} from '@angular/router';
@@ -11,12 +11,13 @@ import {Season} from '../../models/season';
   styleUrls: ['./seasons.component.sass']
 })
 export class SeasonsComponent implements OnInit {
-
+  @Input() show: Show;
 seasons: Season[];
 
   constructor(private showService: ShowsService, private route: ActivatedRoute) {
-    this.route.paramMap.subscribe(pm =>
-      this.showService.getSeasons(pm.get('id')).subscribe(result => {
+
+
+      this.showService.getSeasons(this.id).subscribe(result => {
         this.seasons = [];
 
         result.map((item) => {
@@ -24,12 +25,12 @@ seasons: Season[];
           this.seasons.push(temp);
 
         });
-      }));
+      });
 
 
   }
   getSeason(): void {
-    console.log('got it');
+
 
   }
 
