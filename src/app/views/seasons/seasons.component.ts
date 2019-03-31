@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {Show} from '../../models/show';
 import {ShowsService} from '../../models/services/shows.service';
 import {ActivatedRoute} from '@angular/router';
@@ -11,26 +11,30 @@ import {Season} from '../../models/season';
   styleUrls: ['./seasons.component.sass']
 })
 export class SeasonsComponent implements OnInit {
-  show: Show;
-  id: number;
+
+seasons: Season[];
+
+  constructor(private showService: ShowsService, private route: ActivatedRoute) {
+    this.route.paramMap.subscribe(pm =>
+      this.showService.getSeasons(pm.get('id')).subscribe(result => {
+        this.seasons = [];
+
+        result.map((item) => {
+          const temp = new Season(item);
+          this.seasons.push(temp);
+
+        });
+      }));
 
 
-  // season: Season;
-  constructor(private showsService: ShowsService, private route: ActivatedRoute) {
-    this.id = +this.route.snapshot.paramMap.get('id');
+  }
+  getSeason(): void {
+    console.log('got it');
+
   }
 
   ngOnInit() {
-  this.getShow();
-  }
 
-  getShow()  {
-    this.showsService.getShow(this.id).subscribe((result) => this.show = new Show(result));
-    this.getSeasons();
-    console.log(this.show);
-  }
-  getSeasons() {
-    this.showsService.getSeasons(this.id).subscribe(results => {this.show.seasons = results; });
   }
 
 }
