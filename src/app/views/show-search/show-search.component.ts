@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ShowsService} from '../../models/services/shows.service';
+
 
 
 @Component({

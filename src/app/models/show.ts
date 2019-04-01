@@ -17,8 +17,6 @@ export class Show {
   previousEpisode: Episode;
 
 
-  // showImage:
-
   constructor(args?) {
     if (args) {
       this.showName = args.name;

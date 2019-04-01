@@ -11,7 +11,7 @@ import {Season} from '../../models/season';
   styleUrls: ['./seasons.component.css']
 })
 export class SeasonsComponent implements OnInit {
-  // @Input() id: number;
+
 
 seasons: Season[];
   private id: string;
