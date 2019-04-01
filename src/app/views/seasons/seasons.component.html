@@ -1,12 +1,10 @@
 <mat-accordion>
 <mat-expansion-panel *ngFor="let result of seasons">
   <mat-expansion-panel-header>
-<!--        <mat-panel-title> {{show.showName}}</mat-panel-title>-->
     <mat-panel-description>Season: {{result.seasonNumber}} </mat-panel-description>
   </mat-expansion-panel-header>
   <ng-template matExpansionPanelContent>
     <app-episodes [id]="result.seasonId"></app-episodes>
-
 
   </ng-template>
 </mat-expansion-panel>

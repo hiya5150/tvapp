@@ -6,9 +6,4 @@ mat-panel-description {
   width: 30%
 }
 
-.flex-container {
-  display: flex;
-  float: left;
-  text-align: center;
 
-}

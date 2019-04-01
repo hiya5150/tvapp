@@ -27,10 +27,6 @@ export class ShowsService {
     return this.http.get<any[]>(this.baseUrl + 'seasons/' + id + '/episodes');
   }
 
-  // get previous and next episode
-  getNextPreviousEpisode(url: string): Observable<any> {
-    return this.http.get( url);
-}
   getJsonForEpisodeCreation(passedUrl: string): Observable<any> {
     return this.http.get<[any]>(passedUrl);
   }

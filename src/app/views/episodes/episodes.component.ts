@@ -21,7 +21,6 @@ export class EpisodesComponent implements OnInit {
 
   getEpisodes(): void {
     this.showsService.getEpisode(this.id).subscribe(result => {
-      console.log(result);
       this.episodes = [];
 
       result.map(item => {

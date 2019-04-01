@@ -1,6 +1,6 @@
 import {Season} from './season';
 import {Episode} from './episode';
-import {ShowsService} from './services/shows.service';
+
 
 export class Show {
 
@@ -29,8 +29,8 @@ export class Show {
       this.seasons = args.seasons;
       this.showId = args.id;
       console.log(this.showId);
-      this.previousEpisodeUrl = (args._links.previousEpisode) ? args.links.previousEpisode.href : null;
-      this.nextEpisodeUrl = (args._links.nextEpisode) ? args.links.nextEpisode.href : null;
+      this.previousEpisodeUrl = (args._links.previousepisode) ? args._links.previousepisode.href : null;
+      this.nextEpisodeUrl = (args._links.nextepisode) ? args._links.nextepisode.href : null;
 
 
 

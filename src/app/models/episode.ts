@@ -6,7 +6,7 @@ export class Episode {
   episodeNumber: number;
   episodeAired: string;
 
-  // episodeImage:
+
 
   constructor(args?) {
     if (args) {

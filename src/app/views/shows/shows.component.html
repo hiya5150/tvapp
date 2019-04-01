@@ -11,16 +11,18 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
     <!--<ng-template matExpansionPanelContent>-->
-      <div class="flex-container">
-      <img *ngIf="show.showImg"[src]="show.showImg.medium">
-      <span [innerHTML]="show.showSummary"></span>
-      <hr>
-      <p *ngIf="show.previousEpisode ">Previous Episode: {{show.previousEpisode.name}}/p>
-      <p *ngIf="show.nextEpisode "> Next Episode: {{show.nextEpisode.name}}/p>
-      </div>
-        <a routerLink="/seasons/{{show.showId}}">More Information</a>
+      <div>
 
-    <!--</ng-template>-->
+      <span [innerHTML]="show.showSummary"></span>
+        <img *ngIf="show.showImg"[src]="show.showImg.medium">
+
+      <p *ngIf="show.previousEpisode ">Previous Episode: {{show.previousEpisode.episodeName}}</p>
+      <p *ngIf="show.nextEpisode "> Next Episode: {{show.nextEpisode.episodeName}}</p>
+
+      </div>
+    <button mat-stroked-button color="warn" routerLink="/seasons/{{show.showId}}">More Information</button>
+
+
   </mat-expansion-panel>
 </mat-accordion>
 

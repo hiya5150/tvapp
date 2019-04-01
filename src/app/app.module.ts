@@ -10,7 +10,6 @@ import {NgPipesModule} from 'angular-pipes';
 import { AppComponent } from './app.component';
 import {ShowsComponent } from './views/shows/shows.component';
 import { ShowSearchComponent } from './views/show-search/show-search.component';
-import { ShowComponent } from './views/show/show.component';
 import { SeasonsComponent } from './views/seasons/seasons.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EpisodesComponent } from './views/episodes/episodes.component';
@@ -23,7 +22,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppComponent,
     ShowsComponent,
     ShowSearchComponent,
-    ShowComponent,
     SeasonsComponent,
     EpisodesComponent,
 

@@ -28,7 +28,7 @@ export class ShowsComponent implements OnInit {
         })
         this.getNextPrevEpisodes();
       }));
-      }
+  }
 
 
   ngOnInit() {
@@ -39,20 +39,12 @@ export class ShowsComponent implements OnInit {
       if (show.nextEpisodeUrl) {
         this.showsService.getJsonForEpisodeCreation(show.nextEpisodeUrl).subscribe(
           res => show.addNextEpisode(new Episode(res))
-
-
         );
       }
       if (show.previousEpisodeUrl) {
-        this.shows.map( show => {
-          if (show.previousEpisodeUrl) {
-            this.showsService.getJsonForEpisodeCreation(show.previousEpisodeUrl).subscribe(
-              res1 => show.addPreviousEpisode(new Episode(res1))
-            );
-          }
-        });
-
-
+        this.showsService.getJsonForEpisodeCreation(show.previousEpisodeUrl).subscribe(
+          res1 => show.addPreviousEpisode(new Episode(res1))
+        );
       }
     });
   }
