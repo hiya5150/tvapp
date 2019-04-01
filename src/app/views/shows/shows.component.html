@@ -2,17 +2,27 @@
   <mat-expansion-panel *ngFor="let show of shows">
     <mat-expansion-panel-header>
       <mat-panel-title> {{show.showName}}</mat-panel-title>
-      <mat-panel-description>Premiered: {{show.showDate | date}}</mat-panel-description>
-      <mat-panel-description>Status: {{show.showStatus}}</mat-panel-description>
+      <mat-panel-description>
+      <p *ngIf="show.showDate">Premiered: {{show.showDate | date}}</p>
+      </mat-panel-description>
+      <mat-panel-description>
+      <p *ngIf="show.showStatus">
+        Status: {{show.showStatus}}</p>
+      </mat-panel-description>
     </mat-expansion-panel-header>
-    <ng-template matExpansionPanelContent>
-      <mat-panel-description> <img [src]="show.showImg.medium"></mat-panel-description>
+    <!--<ng-template matExpansionPanelContent>-->
+      <div class="flex-container">
+      <img *ngIf="show.showImg"[src]="show.showImg.medium">
       <span [innerHTML]="show.showSummary"></span>
-<!--      <app-seasons [id]="show.showId"></app-seasons>-->
-      <a routerLink="/seasons/{{show.showId}}">More Information</a>
+      <hr>
+      <p *ngIf="show.previousEpisode ">Previous Episode: {{show.previousEpisode.name}}/p>
+      <p *ngIf="show.nextEpisode "> Next Episode: {{show.nextEpisode.name}}/p>
+      </div>
+        <a routerLink="/seasons/{{show.showId}}">More Information</a>
 
-    </ng-template>
+    <!--</ng-template>-->
   </mat-expansion-panel>
 </mat-accordion>
+
 
 

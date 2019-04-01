@@ -1,7 +1,14 @@
 mat-panel-title {
-  width: 50%;
+  width: 40%;
 }
 
 mat-panel-description {
-  width: 25%
+  width: 30%
+}
+
+.flex-container {
+  display: flex;
+  float: left;
+  text-align: center;
+
 }

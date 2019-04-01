@@ -17,11 +17,6 @@ export class ShowsService {
   getShows(query): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl + 'search/shows?q=' + query);
   }
-  //
-  // // // gets an individual show based on id
-  // // getShow(id: number): Observable<any[]> {
-  // //   return this.http.get<any[]>(this.showUrl + id + '?embed=nextepisode');
-  // }
 
   // gets list of season based on show's id
   getSeasons(id: any): Observable<any[]> {
@@ -30,6 +25,14 @@ export class ShowsService {
 // get list of episodes
   getEpisode(id: string): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl + 'seasons/' + id + '/episodes');
+  }
+
+  // get previous and next episode
+  getNextPreviousEpisode(url: string): Observable<any> {
+    return this.http.get( url);
+}
+  getJsonForEpisodeCreation(passedUrl: string): Observable<any> {
+    return this.http.get<[any]>(passedUrl);
   }
 }
 
