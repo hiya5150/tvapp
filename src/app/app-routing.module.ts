@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ShowSearchComponent} from './views/show-search/show-search.component';
@@ -7,7 +8,7 @@ import {EpisodesComponent} from './views/episodes/episodes.component';
 
 
 const routes: Routes = [
-
+// these are the routes that allows user to navigate from one component to another
   {path: 'showSearch/', component: ShowSearchComponent},
   {path: 'shows/:query', component: ShowsComponent},
   {path: 'seasons/:id', component: SeasonsComponent},

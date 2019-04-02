@@ -1,5 +1,5 @@
 export class Episode {
-
+// this class contains properties that contain informnation on episodes
   episodeId: number;
   episodeName: string;
   episodeUrl: string;

@@ -13,7 +13,7 @@ export class ShowsService {
   private baseUrl = 'http://api.tvmaze.com/';
 
 
-// gets list of shows based on seach query
+// gets list of shows based on search query
   getShows(query): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl + 'search/shows?q=' + query);
   }
@@ -26,7 +26,7 @@ export class ShowsService {
   getEpisode(id: string): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl + 'seasons/' + id + '/episodes');
   }
-
+  // gets JSON data from API for next/previous episode info
   getJsonForEpisodeCreation(passedUrl: string): Observable<any> {
     return this.http.get<[any]>(passedUrl);
   }

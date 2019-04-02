@@ -6,6 +6,7 @@
         <div>
         <form class="form1">
             <mat-form-field color="accent" appearance="standard" aria-label="search" >
+              <!--ngModel means that whatever is typed into input is assigned to the query property-->
           <input [(ngModel)]="query" matInput type="text" name="random" >
             </mat-form-field>
           <button mat-icon-button

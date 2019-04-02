@@ -1,4 +1,5 @@
 <mat-accordion>
+  <!--*ngFor iterates through seasons that are returned after http call is made-->
 <mat-expansion-panel *ngFor="let result of seasons">
   <mat-expansion-panel-header>
     <mat-panel-description>Season: {{result.seasonNumber}} </mat-panel-description>

@@ -1,4 +1,5 @@
 <mat-accordion>
+  <!--*ngFor iterates through shows that are returned after http call is made-->
   <mat-expansion-panel *ngFor="let show of shows">
     <mat-expansion-panel-header>
       <mat-panel-title> {{show.showName}}</mat-panel-title>

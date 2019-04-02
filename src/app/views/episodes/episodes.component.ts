@@ -11,6 +11,7 @@ import {ShowsService} from '../../models/services/shows.service';
 export class EpisodesComponent implements OnInit {
   @Input() id: string;
   episodes: Episode[];
+  // columns for mat table
   displayedColumns: string[] = ['number', 'name', 'aired'];
 
   constructor(private showsService: ShowsService ) {}
@@ -18,7 +19,7 @@ export class EpisodesComponent implements OnInit {
   ngOnInit() {
     this.getEpisodes();
   }
-
+// issues call to API. subscribes episodes to the results that are returned. adds results to episodes array
   getEpisodes(): void {
     this.showsService.getEpisode(this.id).subscribe(result => {
       this.episodes = [];

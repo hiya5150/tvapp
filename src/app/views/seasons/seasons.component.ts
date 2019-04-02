@@ -19,8 +19,10 @@ seasons: Season[];
   constructor(
     private showService: ShowsService,
     private route: ActivatedRoute) {
+    // a snapshot is taken from the URL and is assigned  to the id property
       this.id = this.route.snapshot.paramMap.get('id');
   }
+  // issues call to API. subscribes seasons to the results that are returned. adds results to seasons array
   getSeason(): void {
     this.showService.getSeasons(this.id).subscribe(result => {
       this.seasons = [];
