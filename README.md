@@ -1,6 +1,6 @@
 # Tvapp
 
-Tvapp is a program that lets the user search a huge database for information about current and old movies and TV shows. Information includes a summary of each show, when it premiered, information on seasons and episodes and much more.
+Tvapp is a program that lets the user search a huge database for information about current and old TV shows. Information includes a summary of each show, when it premiered, information on seasons and episodes and much more.
 
 
 # Installation
