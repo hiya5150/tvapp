@@ -14,7 +14,7 @@
       <div>
 
       <span [innerHTML]="show.showSummary"></span>
-        <img *ngIf="show.showImg"[src]="show.showImg.medium">
+        <img *ngIf="show.showImg"[src]="show.showImg">
 
       <p *ngIf="show.previousEpisode ">Previous Episode: {{show.previousEpisode.episodeName}}</p>
       <p *ngIf="show.nextEpisode "> Next Episode: {{show.nextEpisode.episodeName}}</p>
