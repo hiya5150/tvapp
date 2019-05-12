@@ -10,7 +10,7 @@ export class ShowsService {
   constructor(private http: HttpClient) {
   }
 // http call
-  private baseUrl = 'http://api.tvmaze.com/';
+  private baseUrl = 'https://api.tvmaze.com/';
 
 
 // gets list of shows based on search query

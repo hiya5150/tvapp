@@ -9,7 +9,7 @@ export class Show {
   showDate: string;
   showStatus: string;
   showSummary: string;
-  showImg: { medium: string };
+  showImg: string;
   seasons: Season[];
   nextEpisodeUrl: string;
   previousEpisodeUrl: string;
@@ -22,7 +22,10 @@ export class Show {
       this.showName = args.name;
       this.showDate = args.premiered;
       this.showSummary = args.summary;
-      this.showImg = args.image;
+      this.showImg = (args.image) ? args.image.original : null;
+      if (this.showImg) {
+        this.showImg = 'https' + this.showImg.substring(4);
+      }
       this.showStatus = args.status;
       this.seasons = args.seasons;
       this.showId = args.id;
