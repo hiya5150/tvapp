@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {Episode} from '../../models/Episode';
+import {Episode} from '../../models/episode';
 import {ShowsService} from '../../models/services/shows.service';
 
 
